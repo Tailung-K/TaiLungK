@@ -285,11 +285,11 @@ function fnCallBack(rtnData) {
             sStx += "        <td width='100' align='center'><input name='title' size='10' type='text' value='" + result.title + "' style='border: 1px solid blue;border-style:dotted;text-align:center;'></td>\n";
             
 //             sStx += "        <td width='150' align='center'><input name='writer' size='10' type='text' value='" + result.writer + "' style='border: 1px solid blue;border-style:dotted;text-align:center;'></td>\n";
-//             sStx += "        <td width='150' align='center'><input name='regdate' size='20' type='text' value='" + result.regdate + "' style='border: 1px solid blue;border-style:dotted;text-align:center;'></td>\n";
+//             sStx += "        <td width='150' align='center'><input name='reg_date' size='20' type='text' value='" + result.reg_date + "' style='border: 1px solid blue;border-style:dotted;text-align:center;'></td>\n";
 //             sStx += "        <td width='100' align='center'><input name='cnt' size='5'  type='text' value='" + result.cnt + "' style='border: 1px solid blue;border-style:dotted;text-align:center;'></td>\n";
             
             sStx += "        <td width='150' align='center'>" + result.writer + "</td>\n";
-            sStx += "        <td width='150' align='center'>" + result.regdate + "</td>\n";
+            sStx += "        <td width='150' align='center'>" + result.reg_date + "</td>\n";
             sStx += "        <td width='100' align='center'>" + result.cnt + "</td>\n";            
             
             sStx += "        <td width='100' align='center'>\n";

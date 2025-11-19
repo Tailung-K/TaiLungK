@@ -7,7 +7,7 @@
 		<result property="title" column="TITLE" />
 		<result property="writer" column="WRITER" />
 		<result property="content" column="CONTENT" />
-		<result property="regdate" column="REG_DATE" />
+		<result property="reg_date" column="REG_DATE" />
 		<result property="cnt" column="CNT" />
         <result property="pay" column="PAY" />
         <result property="rank" column="RANK" />        
@@ -25,11 +25,26 @@
 	</insert>
 
 	<update id="updateBoard" parameterType="board">
-		UPDATE  BOARD 
-		SET
-                TITLE = #{title}
+		UPDATE  BOARD
+		SET     
+                CNT     = #{cnt} + 1
+        <if test="title != null">
+            ,   TITLE = #{title}
+        </if>
+        <if test="writer != null">
+            ,   WRITER  = #{writer}
+        </if>
+        <if test="content != null">            
             ,   CONTENT = #{content}
-		WHERE SEQ = #{seq}
+        </if>
+        <if test="pay != null">
+            ,   PAY     = #{pay}
+        </if>            
+        <if test="rank != null">
+            ,   RANK    = #{rank}
+        </if>
+        WHERE   1=1
+        AND     SEQ     = #{seq}
 	</update>
 	
     <insert id="insertForList" parameterType="board">
@@ -44,24 +59,24 @@
     </insert>
 
     <update id="updateForList" parameterType="board">
-        UPDATE  BOARD 
-        SET
-                TITLE   = #{title}
+        UPDATE  BOARD
+        SET     
+                CNT     = #{cnt} + 1
+        <if test="title != null">
+            ,   TITLE = #{title}
+        </if>
         <if test="writer != null">
             ,   WRITER  = #{writer}
         </if>
         <if test="content != null">            
             ,   CONTENT = #{content}
         </if>
-        <if test="cnt != null">
-            ,   CNT     = #{cnt} + 1
-        </if>            
         <if test="pay != null">
             ,   PAY     = #{pay}
         </if>            
         <if test="rank != null">
             ,   RANK    = #{rank}
-        </if>
+        </if>    
         WHERE   1=1
         AND     SEQ     = #{seq}
     </update>

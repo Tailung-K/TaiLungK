@@ -89,7 +89,8 @@ public class BoardController {
 
         boardService.insertBoard( boardVo );
 
-        return "getBoardList.do";
+//        return "getBoardList.do";
+        return "getBoardList.jsp"; // View 이름 리턴        
     }
 
     /**
@@ -107,7 +108,8 @@ public class BoardController {
     public String updateBoard( @ModelAttribute("board") BoardVO boardVo ) {
         boardService.updateBoard( boardVo );
 
-        return "getBoardList.do";
+//        return "getBoardList.do";
+        return "getBoardList.jsp"; // View 이름 리턴        
     }
     
     /**
@@ -126,7 +128,8 @@ public class BoardController {
     public String deleteBoard( BoardVO boardVo ) {
         boardService.deleteBoard( boardVo );
 
-        return "getBoardList.do";
+//        return "getBoardList.do";
+        return "getBoardList.jsp"; // View 이름 리턴        
     }    
     
     
@@ -149,7 +152,8 @@ public class BoardController {
     public String insertForList( BoardVO boardVo, HttpServletRequest req, HttpServletResponse res ) throws IOException {
         boardService.insertBoard( boardVo );
 
-        return "getBoardList.do";
+//        return "getBoardList.do";
+        return "getBoardList.jsp"; // View 이름 리턴        
     }
 
 
@@ -169,7 +173,8 @@ public class BoardController {
     public String updateForList( @ModelAttribute("board") BoardVO boardVo, HttpServletRequest req, HttpServletResponse res ) {
         boardService.updateBoard( boardVo );
 
-        return "getBoardList.do";
+//        return "getBoardList.do";
+        return "getBoardList.jsp"; // View 이름 리턴        
     }
     
     /**
@@ -188,7 +193,8 @@ public class BoardController {
     public String deleteForList( BoardVO boardVo, HttpServletRequest req, HttpServletResponse res ) {
         boardService.deleteBoard( boardVo );
 
-        return "getBoardList.do";
+//        return "getBoardList.do";
+        return "getBoardList.jsp"; // View 이름 리턴        
     }
 
 
